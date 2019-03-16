@@ -1,5 +1,3 @@
-% Fitting Gamma & Lognormal Distribution
-
 %%%Import Excel DATA %%%
 cd('E:\MATLAB 2018a\bin\MATLAB_Files\DESIGNS AND SCRIPTS\Bistable Perception Experiment\Data Fitness & Outliers\Data Fitness & Outliers\Excel Files Related to Percept Durations')
 DurationVariables=detectImportOptions('Exclusion Variables Used Data.xlsx');
