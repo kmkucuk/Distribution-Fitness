@@ -1,4 +1,4 @@
-function [RmseValues,TheoreticalDistributionValues,DistributionParameters]=FitYourDistribution(x,y)
+function [RmseValues,TheoreticalDistributionValues]=FitYourDistribution(x,y)
 
     rng('default');
 
@@ -98,6 +98,5 @@ function [RmseValues,TheoreticalDistributionValues,DistributionParameters]=FitYo
         end
 
         TheoreticalDistributionValues=[emp_x_axis;Log_TheoValues;Log_CurvePDF;Gamma_TheoValues;Gamma_CurvePDF];
-        DistributionParameters=[LogAlpha,LogSigma,GammaAlpha,GammaSigma];
         RmseValues=[rmseLog;rmseGamma];
 end
