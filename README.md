@@ -23,9 +23,5 @@ TheoreticalDistributionValues = [ (1) your variables' raw values;
                                   (3) observed lognormal distribution pdf;
                                   (4) expected gamma distribution pdf;
                                   (5) observed gamma distribution pdf]
-                                  
-DistributionParameters = [ (1) alpha of lognormal dist;
-                           (2) sigma of lognormal dist;
-                           (3) alpha of gamma dist;
-                           (4) sigma of gamma dist]
+                                 
 
