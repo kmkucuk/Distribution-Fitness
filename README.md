@@ -1,27 +1,16 @@
 # Distribution-Fitness
 
-Here i used "VariableExtractionFor_Fitness" code for extracting relevant variables from an Excel file for using in MATLAB. 
+FitYourDistribution(x,[0 or 1]) fits your values into both gamma and lognormal distributions. At the same time it analyses the fit of your values into these distributions by conducting a Chi-Square goodness of fit analysis. Parameters of the Chi-Square test are saved into your workspace as "ChiSquareParameters". Also these parameters are printed in your command window. 
 
-Then within those variables, i used the desired one for conducting a goodness of fit analysis. 
+***You have to import your own values into workspace for this analysis. Make sure that values in the variable consitute a column vector (e.g. x(n,1) where n is row numbers and 1 is the maximum column number). 
 
-This analysis involved both Lognormal and Gamma Distributions. Reason was my research subject. 
-I had to fit relevant variables into these two distributions for validity purposes in my research and these were coded in Excel as:
-'TL_Lattice', 'BR_Lattice','BL_Cube', 'TR_Cube','Hor_endo','Ver_endo','EndoPressCount','LatticePressCount','CubePressCount'
+First row of ChiSquareParameters belongs to goodness of fit of gamma distribution. 
+ChiSquareParameters(1,1)= First value represents the hypothesis of "your values constitute a gamma distribution". If this value is 0 than this hypothesis is not rejected, indicating that it is a good fit.
+ChiSquareParameters(1,2)=Second value is your "p" value. If this is below .05, traditionally your fit is not good. 
+ChiSquareParameters(1,3)=Third value is your Chi-Square statistics.
 
-You can change the names of these variables in "VariableExtractionFor_Fitness" file and add your own variable names coded in Excel. 
-Directories have to change as well.
+Same order for parameters apply to second row which belongs to goodness of fit parameters for lognormal distribution.
 
-If you somehow managed to import your variables to MATLAB then you can type FitYourDistribution("Yourvariablename", "0 (no graphs) or 1 (with graphs)").
-Than code will fit your values into both Gamma and Lognormal distributions, compare their root mean squared errors and type whichever is best for you.
 
-[RmseValues,TheoreticalDistributionValues,DistributionParameters]=FitYourDistribution(x,y)
-
-RmseValues = are root means squared errors for Lognormal and Gamma respectively.
-
-TheoreticalDistributionValues = [ (1) your variables' raw values; 
-                                  (2) expected lognormal distribution pdf; 
-                                  (3) observed lognormal distribution pdf;
-                                  (4) expected gamma distribution pdf;
-                                  (5) observed gamma distribution pdf]
                                  
 
